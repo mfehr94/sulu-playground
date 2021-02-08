@@ -30,6 +30,7 @@
         "dantleech/phpcr-migrations-bundle": "^1.2",
         "doctrine/doctrine-bundle": "^2.0",
         "doctrine/doctrine-fixtures-bundle": "^3.0",
+        "doctrine/doctrine-migrations-bundle": "^3.0",
         "friendsofsymfony/http-cache-bundle": "^2.8",
         "handcraftedinthealps/zendsearch": "^2.0",
         "jackalope/jackalope-doctrine-dbal": "^1.3",
