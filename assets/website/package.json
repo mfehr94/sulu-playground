@@ -1,0 +1,62 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Basic bundle structure for a default website project.",
+  "author": "Mario Fehr",
+  "license": "ISC",
+  "private": true,
+  "engines": {
+    "node": "14.15.*",
+    "npm": "6.14.*",
+    "yarn": "1.22.*"
+  },
+  "scripts": {
+    "info": "npm-scripts-info",
+    "build": "yarn run lint:fix && webpack --mode=production",
+    "watch": "webpack -w --mode=development",
+    "lint": "yarn run lint:css && yarn run lint:js",
+    "lint:fix": "yarn run lint:css:fix && yarn run lint:js:fix",
+    "lint:js": "eslint js",
+    "lint:js:fix": "eslint js --fix",
+    "lint:css": "stylelint scss/*.scss scss/**/*.scss",
+    "lint:css:fix": "stylelint scss/*.scss scss/**/*.scss --fix"
+  },
+  "scripts-info": {
+    "build": "Compiles the js and css and checks the code style.",
+    "watch": "Watch the js and css changes.",
+    "lint": "Check the js and css code style.",
+    "lint:fix": "Check the js and css code style and tries to fix it",
+    "lint:js": "Checks the js code style.",
+    "lint:js:fix": "Checks the js code style and tries to fix it.",
+    "lint:css": "Checks the css code style.",
+    "lint:css:fix": "Checks the css code style and tries to fix it."
+  },
+  "dependencies": {
+    "@sulu/web": "^2.0.0",
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
+    "autoprefixer": "^10.2.4",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "core-js": "^3.8.3",
+    "css-loader": "^5.0.2",
+    "cssnano": "^4.1.10",
+    "eslint": "^7.19.0",
+    "eslint-config-ma": "^1.1.0",
+    "mini-css-extract-plugin": "^1.3.6",
+    "npm-scripts-info": "^0.3.9",
+    "postcss": "^8.2.6",
+    "postcss-loader": "^5.0.0",
+    "sass": "^1.32.7",
+    "sass-loader": "^11.0.1",
+    "stylelint": "^13.10.0",
+    "stylelint-config-ma": "^1.1.4",
+    "webpack": "^5.21.2",
+    "webpack-clean-obsolete-chunks": "^0.4.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-manifest-plugin": "^3.0.0"
+  }
+}
