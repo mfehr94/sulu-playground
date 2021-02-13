@@ -15,7 +15,9 @@
         } %}
     {% endblock %}
 
-    {% block style %}{% endblock %}
+    {% block style %}
+        <link rel="stylesheet" href="{{ asset('/build/website/css/main.css', 'webpack') }}" />
+    {% endblock %}
 </head>
 <body>
     <header>
@@ -56,6 +58,8 @@
         {% endblock %}
     </footer>
 
-    {% block javascripts %}{% endblock %}
+    {% block javascripts %}
+        <script src="{{ asset('/build/website/js/main.js', 'webpack') }}"></script>
+    {% endblock %}
 </body>
 </html>
