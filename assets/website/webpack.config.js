@@ -17,6 +17,7 @@ module.exports = (env, argv) => {
     return {
         entry: {
             main: ['./js/main.js', './scss/main.scss'],
+            modernizr: './js/lib/modernizr-custom.js',
         },
         output: {
             publicPath: 'build/website/',

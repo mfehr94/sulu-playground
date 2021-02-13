@@ -59,6 +59,7 @@
     </footer>
 
     {% block javascripts %}
+        <script src="{{ asset('/build/website/js/modernizr.js', 'webpack') }}"></script>
         <script src="{{ asset('/build/website/js/main.js', 'webpack') }}"></script>
     {% endblock %}
 </body>
