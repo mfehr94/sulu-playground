@@ -1,3 +1,27 @@
 {
-  "extends": "stylelint-config-ma"
+  "extends": "stylelint-config-ma",
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "use",
+          "content",
+          "extend",
+          "include",
+          "mixin",
+          "if",
+          "for",
+          "forward",
+          "else",
+          "elseif",
+          "error",
+          "each",
+          "function",
+          "return",
+          "while"
+        ]
+      }
+    ]
+  }
 }

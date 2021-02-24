@@ -1,5 +1,11 @@
 {
-  "/build/website/css/main.css": "build/website/css/main.d140ee61a4e669ffb906.css",
-  "/build/website/js/main.js": "build/website/js/main.d140ee61a4e669ffb906.js",
-  "/build/website/js/modernizr.js": "build/website/js/modernizr.d140ee61a4e669ffb906.js"
+  "/build/website/css/main.css": "build/website/css/main.fa77838b85409fd049e3.css",
+  "/build/website/js/main.js": "build/website/js/main.9f239584ab106ad38ea5.js",
+  "/build/website/fonts/main.svg": "build/website/fonts/icomoon-test.2f93120a4b7ea7a77b58.svg?78x09i",
+  "/build/website/fonts/main.ttf": "build/website/fonts/icomoon-test.14df92dc0df4704b23cf.ttf?78x09i",
+  "/build/website/fonts/main.woff": "build/website/fonts/icomoon-test.56deb8f1db7ac4668676.woff?78x09i",
+  "/build/website/js/modernizr.js": "build/website/js/modernizr.d738b8f5863d4742c782.js",
+  "/build/website/fonts/icomoon-test/fonts/icomoon-test.svg?78x09i": "build/website/fonts/icomoon-test.2f93120a4b7ea7a77b58.svg?78x09i",
+  "/build/website/fonts/icomoon-test/fonts/icomoon-test.woff?78x09i": "build/website/fonts/icomoon-test.56deb8f1db7ac4668676.woff?78x09i",
+  "/build/website/fonts/icomoon-test/fonts/icomoon-test.ttf?78x09i": "build/website/fonts/icomoon-test.14df92dc0df4704b23cf.ttf?78x09i"
 }

@@ -17,12 +17,12 @@ module.exports = (env, argv) => {
     return {
         entry: {
             main: ['./js/main.js', './scss/main.scss'],
-            modernizr: './js/lib/modernizr-custom.js',
+            modernizr: './js/vendor/modernizr-custom.js',
         },
         output: {
             publicPath: 'build/website/',
             path: baseOutputPath,
-            filename: 'js/[name].[hash].js',
+            filename: 'js/[name].[contenthash].js',
         },
         plugins: [
             new webpack.DefinePlugin({
@@ -30,7 +30,7 @@ module.exports = (env, argv) => {
                 __ENV__: JSON.stringify(argv.mode),
             }),
             new MiniCssExtractPlugin({
-                filename: 'css/[name].[hash].css',
+                filename: 'css/[name].[contenthash].css',
             }),
             new WebpackManifestPlugin({
                 fileName: baseOutputPath + '/manifest.json',
@@ -51,7 +51,14 @@ module.exports = (env, argv) => {
                 {
                     test: /\.(scss)$/,
                     use: [
-                        MiniCssExtractPlugin.loader,
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {
+                                publicPath: (resourcePath, context) => {
+                                    return path.relative(path.dirname(resourcePath), context) + '/';
+                                },
+                            },
+                        },
                         {
                             loader: 'css-loader',
                             options: {
@@ -72,9 +79,22 @@ module.exports = (env, argv) => {
                         },
                     ],
                 },
+                {
+                    test: /\.(png|jpg|jpeg|gif|svg)$/i,
+                    type: 'asset/resource',
+                    generator: {
+                        filename: 'images/[name].[hash][ext][query]',
+                    },
+                },
+                {
+                    test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
+                    type: 'asset/resource',
+                    generator: {
+                        filename: 'fonts/[name].[hash][ext][query]',
+                    },
+                },
             ],
         },
-
         optimization: {
             minimizer: [new TerserPlugin({
                 extractComments: false,

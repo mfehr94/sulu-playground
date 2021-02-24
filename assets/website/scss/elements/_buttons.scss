@@ -1,1 +1,9 @@
 // Define buttons here.
+@use './scss/settings/icon-variables' as icomoon;
+
+.button {
+    &::after {
+        content: icomoon.$icon-home;
+        font-family: icomoon.$icomoon-font-family;
+    }
+}
